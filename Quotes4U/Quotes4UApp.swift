@@ -31,7 +31,6 @@ private enum CoreDataStack {
     return container.viewContext
   }()
 
-  // 3
   static func save() {
     guard viewContext.hasChanges else { return }
 

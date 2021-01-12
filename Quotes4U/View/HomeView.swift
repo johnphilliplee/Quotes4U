@@ -121,7 +121,7 @@ struct HomeView: View {
             viewModel.reset()
         case .liked, .disliked:
             if decisionState == .liked {
-//                QuoteManagedObject.save(quote: viewModel.quote, inViewContext: viewContext)
+                QuoteManagedObject.save(quote: viewModel.quote, inViewContext: viewContext)
             }
             
             let translation = change.translation
