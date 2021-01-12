@@ -15,7 +15,7 @@ enum DecisionState {
 class HomeViewModel: ObservableObject {
     @Published var quote: Quote = Quote.starter
     @Published var fetching: Bool = false
-    @Published var backgroundColor: Color = Color.gray
+    @Published var backgroundColor: Color = Color.themeForeground
     @Published var decisionState: DecisionState = .neutral
     
     private var service: QuoteServiceDataPublisher
@@ -38,7 +38,7 @@ class HomeViewModel: ObservableObject {
     }
 
     func reset() {
-        backgroundColor = Color.gray
+        backgroundColor = Color.themeForeground
     }
     
     func updateBackgroundColorBasedOnTranslation(_ translation: Double) {
@@ -48,7 +48,7 @@ class HomeViewModel: ObservableObject {
         case 0.5...:
             backgroundColor = Color.green
         default:
-            backgroundColor = Color.gray
+            backgroundColor = Color.themeForeground
         }
     }
     

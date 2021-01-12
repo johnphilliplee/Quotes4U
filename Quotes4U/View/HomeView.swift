@@ -34,7 +34,9 @@ struct HomeView: View {
         QuoteCardView(quote: viewModel.quote.quote)
             .frame(width: min(300, bounds.width * 0.7), height: min(400, bounds.height * 0.7))
             .background(viewModel.backgroundColor)
+            .foregroundColor(Color.themeBackground)
             .cornerRadius(10)
+            .shadow(radius: 20)
             .rotationEffect(rotationAngle)
             .offset(x: cardTranslation.width, y: cardTranslation.height)
             .gesture(
@@ -54,10 +56,8 @@ struct HomeView: View {
     
     var body: some View {
         VStack {
-            Text("Quotes by Kanye")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            Spacer()
+            HeaderBanner(bounds: bounds)
+            
             ZStack {
                 HStack {
                     Circle()
@@ -86,18 +86,30 @@ struct HomeView: View {
                 quoteCardView()
                     .opacity(isQuoteCardVisible ? 1 : 0)
                     .offset(x: 0, y: isQuoteCardVisible ? 0 : -bounds.height)
-                    .animation(.spring(response: 0.8, dampingFraction: 0.6, blendDuration: 0.5))                
-            }
-            
-            Button("View Saved Quotes") {
-                presentSavedJokes = true
-            }
+                    .animation(.spring(response: 0.8, dampingFraction: 0.6, blendDuration: 0.5))
+            }.padding()
             Spacer()
-        }.onAppear(perform: reset)
+            Button(action: {presentSavedJokes = true}) {
+                ZStack {
+                    Rectangle()
+                        .fill(Color.accentColor)
+                    Text("View Saved Quotes")
+                        .font(.headline)
+                        .bold()
+                        .foregroundColor(Color.themeBackground)
+                }
+            }.frame(width: bounds.width * 0.8, height: 55)
+            .shadow(radius: 5)
+            Spacer()
+        }
+        .background(Color.themeBackground)
+        .edgesIgnoringSafeArea(.vertical)
+        .onAppear(perform: reset)
         .sheet(isPresented: $presentSavedJokes) {
             SavedQuotesView()
                 .environment(\.managedObjectContext, self.viewContext)
         }
+
     }
     
     private func updateBackgroundColor() {
@@ -154,14 +166,5 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView(viewModel: HomeViewModel())
-    }
-}
-
-struct QuoteCardView: View {
-    let quote: String
-    var body: some View {
-        Text(quote)
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-            .padding()
     }
 }
