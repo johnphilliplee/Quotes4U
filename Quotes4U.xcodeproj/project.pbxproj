@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D30797525B03440002A4B1B /* HeaderBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D30797425B03440002A4B1B /* HeaderBanner.swift */; };
+		0D30797A25B03486002A4B1B /* QuoteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D30797925B03486002A4B1B /* QuoteCardView.swift */; };
+		0D3EEEBA25AEDEC8006971D4 /* Trapezium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3EEEB925AEDEC8006971D4 /* Trapezium.swift */; };
+		0D611ACE25AD991E006700EF /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D611ACD25AD991E006700EF /* Color+.swift */; };
 		EBF3961B25AD25A400EBD11A /* Quotes4UApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3961A25AD25A400EBD11A /* Quotes4UApp.swift */; };
 		EBF3961D25AD25A400EBD11A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF3961C25AD25A400EBD11A /* HomeView.swift */; };
 		EBF3961F25AD25A500EBD11A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBF3961E25AD25A500EBD11A /* Assets.xcassets */; };
@@ -43,6 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D30797425B03440002A4B1B /* HeaderBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBanner.swift; sourceTree = "<group>"; };
+		0D30797925B03486002A4B1B /* QuoteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCardView.swift; sourceTree = "<group>"; };
+		0D3EEEB925AEDEC8006971D4 /* Trapezium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trapezium.swift; sourceTree = "<group>"; };
+		0D611ACD25AD991E006700EF /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		EBF3961725AD25A400EBD11A /* Quotes4U.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quotes4U.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF3961A25AD25A400EBD11A /* Quotes4UApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotes4UApp.swift; sourceTree = "<group>"; };
 		EBF3961C25AD25A400EBD11A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -92,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D611ACC25AD990B006700EF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0D611ACD25AD991E006700EF /* Color+.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		EBF3960E25AD25A400EBD11A = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +131,7 @@
 		EBF3961925AD25A400EBD11A /* Quotes4U */ = {
 			isa = PBXGroup;
 			children = (
+				0D611ACC25AD990B006700EF /* Resources */,
 				EBF3965025AD25BD00EBD11A /* Model */,
 				EBF3964B25AD25B000EBD11A /* View */,
 				EBF3964F25AD25B800EBD11A /* ViewModel */,
@@ -160,6 +177,9 @@
 				EBF3961C25AD25A400EBD11A /* HomeView.swift */,
 				EBF3967025AD4D2000EBD11A /* HudView.swift */,
 				EBF3969425AD61DD00EBD11A /* SavedQuotesView.swift */,
+				0D3EEEB925AEDEC8006971D4 /* Trapezium.swift */,
+				0D30797425B03440002A4B1B /* HeaderBanner.swift */,
+				0D30797925B03486002A4B1B /* QuoteCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -342,10 +362,14 @@
 				EBF3965D25AD268B00EBD11A /* Quote.swift in Sources */,
 				EBF3966C25AD29D000EBD11A /* KanyeQuoteService.swift in Sources */,
 				EBF3961D25AD25A400EBD11A /* HomeView.swift in Sources */,
+				0D30797525B03440002A4B1B /* HeaderBanner.swift in Sources */,
 				EBF3966225AD287700EBD11A /* QuoteServiceDataPublisher.swift in Sources */,
 				EBF3965525AD261B00EBD11A /* HomeViewModel.swift in Sources */,
 				EBF3969525AD61DD00EBD11A /* SavedQuotesView.swift in Sources */,
+				0D3EEEBA25AEDEC8006971D4 /* Trapezium.swift in Sources */,
 				EBF3967125AD4D2000EBD11A /* HudView.swift in Sources */,
+				0D611ACE25AD991E006700EF /* Color+.swift in Sources */,
+				0D30797A25B03486002A4B1B /* QuoteCardView.swift in Sources */,
 				EBF3967B25AD5F2500EBD11A /* QuoteModel.xcdatamodeld in Sources */,
 				EBF3961B25AD25A400EBD11A /* Quotes4UApp.swift in Sources */,
 			);
