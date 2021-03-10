@@ -1,0 +1,50 @@
+---
+name: Quotes4U
+attributes:
+  ORGANIZATIONNAME: "John Phillip Lee"
+options:
+  deploymentTarget:
+    iOS: "14.1"
+settings:
+  base:
+    OTHER_LDFLAGS: -lc++ -ObjC
+
+fileGroups:
+  - project.yml
+
+targets:
+  Quotes4U:
+    type: application
+    platform: iOS
+    settings:
+      base:
+        CODE_SIGN_STYLE: Manual
+    sources:
+      - path: Quotes4U
+        
+  Quotes4UTests:
+    type: bundle.unit-test
+    platform: iOS
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.johnphilliplee.Quotes4UTests
+      TEST_TARGET_NAME: Quotes4U
+      HEADER_SEARCH_PATHS:
+        - $(inherited)
+    sources:
+      - path: Quotes4UTests
+
+    dependencies:
+      - target: Quotes4U
+
+  Quotes4UUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.johnphilliplee.Quotes4UUITests
+      TEST_TARGET_NAME: Quotes4U
+    sources:
+      - path: Quotes4UUITests
+
+    dependencies:
+      - target: Quotes4U
+

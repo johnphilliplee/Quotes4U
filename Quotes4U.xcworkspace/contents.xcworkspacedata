@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Quotes4U.xcodeproj">
+      location = "container:Quotes4U.xcodeproj">
    </FileRef>
 </Workspace>

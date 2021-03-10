@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -euo pipefail
+
+PATH=`git rev-parse --show-toplevel`"/tools/bin:$PATH"
+
+find . \( -depth 1 -a -name project-base.yml -prune \) -o \( -depth 1 -a \( -name lib -o -name tools \) -prune \) -o -name project\*.yml -print0 | xargs -0 -n 1 xcodegen -s
