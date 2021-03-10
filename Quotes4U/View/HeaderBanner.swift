@@ -23,11 +23,7 @@ struct HeaderBanner: View {
                 .fontWeight(.bold)
                 .offset(x: 50, y: -50)
                 .foregroundColor(Color.themeForeground)
-                .shadow(color: .white, radius: 0.4)
-                .shadow(color: .white, radius: 0.4)
-                .shadow(color: .white, radius: 0.4)
-                .shadow(color: .white, radius: 0.4)
-                .shadow(color: .white, radius: 0.4)
+                .highlighted()
         }
     }
 }

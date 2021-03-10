@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		08E43CF7039966E0F065EC67 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59AE47791AB53AB613EEC943 /* Preview Assets.xcassets */; };
+		14CEE5E3A1B798FCC82645AA /* TextHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05122A15C04B761CA9078586 /* TextHighlighter.swift */; };
 		1B072ED9EDDB0BDEDDCC10C2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D0F857CF4D53CA9DBE3E79 /* HomeViewModel.swift */; };
 		20F5775B7FBAA58293A5234E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABCC7A95CDC0B9BBC4411A7 /* Assets.xcassets */; };
 		24525FCAFFEF407919877861 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040EC3E9F81C9CDC8DBC2AB /* HudView.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		01D0F857CF4D53CA9DBE3E79 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		05122A15C04B761CA9078586 /* TextHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHighlighter.swift; sourceTree = "<group>"; };
 		0E2A4103A573E789DB075525 /* Quotes4UTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotes4UTests.swift; sourceTree = "<group>"; };
 		14703D6B170571964D4B260D /* MockQuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockQuoteService.swift; sourceTree = "<group>"; };
 		1908D68232F9A3E55221C396 /* Quotes4U.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Quotes4U.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +180,7 @@
 				4040EC3E9F81C9CDC8DBC2AB /* HudView.swift */,
 				FFC6DAEB7326B57C0E3FBD7D /* QuoteCardView.swift */,
 				D18E77E126F7963B5841C9CC /* SavedQuotesView.swift */,
+				05122A15C04B761CA9078586 /* TextHighlighter.swift */,
 				8AB0F238B115A6E61B5BECD4 /* Trapezium.swift */,
 			);
 			path = View;
@@ -466,6 +469,7 @@
 				253D53845A9785C93E348CD6 /* QuoteServiceDataPublisher.swift in Sources */,
 				7B9FC4888CA2BFE0F5A5013A /* Quotes4UApp.swift in Sources */,
 				E8ACA311FE0F7CC64A03B269 /* SavedQuotesView.swift in Sources */,
+				14CEE5E3A1B798FCC82645AA /* TextHighlighter.swift in Sources */,
 				D5F98595D3EA008A0BC852EA /* Trapezium.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

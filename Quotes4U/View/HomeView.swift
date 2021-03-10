@@ -88,7 +88,7 @@ struct HomeView: View {
                     Text("View Saved Quotes")
                         .font(.headline)
                         .bold()
-                        .foregroundColor(Color.themeBackground)
+                        .foregroundColor(Color.themeTertiary)
                 }
             }.frame(width: bounds.width * 0.8, height: 55)
                 .shadow(radius: 5)
