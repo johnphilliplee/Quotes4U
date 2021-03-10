@@ -1,14 +1,6 @@
-//
-//  Quotes4UUITests.swift
-//  Quotes4UUITests
-//
-//  Created by John Lee on 1/12/21.
-//
-
 import XCTest
 
 class Quotes4UUITests: XCTestCase {
-
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 

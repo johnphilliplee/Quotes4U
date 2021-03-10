@@ -1,10 +1,3 @@
-//
-//  Color+.swift
-//  Quotes4U
-//
-//  Created by John Phillip Lee on 1/12/21.
-//
-
 import SwiftUI
 
 extension Color {
@@ -14,4 +7,3 @@ extension Color {
     static let themeSecondary = Color("SecondaryColor")
     static let themeTertiary = Color("TertiaryColor")
 }
-

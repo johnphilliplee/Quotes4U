@@ -1,10 +1,3 @@
-//
-//  HudView.swift
-//  Quotes4U
-//
-//  Created by John Lee on 1/12/21.
-//
-
 import SwiftUI
 
 enum ImageType {
@@ -13,7 +6,7 @@ enum ImageType {
 
 struct HudView: View {
     let imageType: ImageType
-    
+
     var body: some View {
         imageForType(imageType)
             .resizable()
@@ -24,7 +17,7 @@ struct HudView: View {
 //            .foregroundColor(colorForType(imageType))
 //            .background(Color.clear)
     }
-    
+
     private func colorForType(_ type: ImageType) -> Color {
         switch type {
         case .down:
@@ -33,7 +26,7 @@ struct HudView: View {
             return Color.red
         }
     }
-    
+
     private func imageForType(_ type: ImageType) -> Image {
         switch type {
         case .down:

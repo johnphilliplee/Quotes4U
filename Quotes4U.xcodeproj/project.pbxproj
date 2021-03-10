@@ -213,6 +213,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33C3C57E669144D7F559853F /* Build configuration list for PBXNativeTarget "Quotes4U" */;
 			buildPhases = (
+				8B7F35A2E451B78DD75E516E /* swiftformat */,
+				63DB8391342736573820937C /* swiftlint */,
 				043389850DC6BC153EE4637A /* Sources */,
 				E203A2506604C08F0D51BB74 /* Resources */,
 			);
@@ -229,6 +231,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E469ED761DC8F1F50E345641 /* Build configuration list for PBXNativeTarget "Quotes4UUITests" */;
 			buildPhases = (
+				48369D72A45043395F6597D1 /* swiftformat */,
+				2884A6E5DFCE22D52B9B2FA7 /* swiftlint */,
 				CDD64231D9DC3AD9F5253ECF /* Sources */,
 			);
 			buildRules = (
@@ -245,6 +249,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BB506D77D0D9E19C8EA1DB4 /* Build configuration list for PBXNativeTarget "Quotes4UTests" */;
 			buildPhases = (
+				70DECCA4EFBD7F5E1DC8228D /* swiftformat */,
+				01C5B0187F4104B942F3A0F7 /* swiftlint */,
 				DD835A6C2E1F31750630D880 /* Sources */,
 				599DC86659A02682A25AD636 /* Resources */,
 			);
@@ -316,6 +322,117 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01C5B0187F4104B942F3A0F7 /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n# vim:sw=2 et\n\nset -euo pipefail\n\nif [ -n \"${CI-}\" ]; then\n  exit 0\nfi\n\nPATH=`git rev-parse --show-toplevel`\"/tools/bin:$PATH\"\n\n\nif ! which swiftlint > /dev/null; then\n  echo \"swiftlint not found\"\n  exit 0\nfi\n\nif ! [ -f \"${SRCROOT}/${PRODUCT_NAME}/.swiftlint.yml\" ]; then\n  echo \".swiftlint.yml not found\"\n  exit 0\nfi\n\nswiftlint --config \"${SRCROOT}/${PRODUCT_NAME}/.swiftlint.yml\" --no-cache \"${SRCROOT}/${PRODUCT_NAME}\" | awk '!/ \\(missing_docs\\)$/ { sub(\": warning:\", \": error:\"); } { print }'\n";
+		};
+		2884A6E5DFCE22D52B9B2FA7 /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n# vim:sw=2 et\n\nset -euo pipefail\n\nif [ -n \"${CI-}\" ]; then\n  exit 0\nfi\n\nPATH=`git rev-parse --show-toplevel`\"/tools/bin:$PATH\"\n\n\nif ! which swiftlint > /dev/null; then\n  echo \"swiftlint not found\"\n  exit 0\nfi\n\nif ! [ -f \"${SRCROOT}/${PRODUCT_NAME}/.swiftlint.yml\" ]; then\n  echo \".swiftlint.yml not found\"\n  exit 0\nfi\n\nswiftlint --config \"${SRCROOT}/${PRODUCT_NAME}/.swiftlint.yml\" --no-cache \"${SRCROOT}/${PRODUCT_NAME}\" | awk '!/ \\(missing_docs\\)$/ { sub(\": warning:\", \": error:\"); } { print }'\n";
+		};
+		48369D72A45043395F6597D1 /* swiftformat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftformat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n# vim:sw=2 et\n\nset -euo pipefail\n\nif [ -n \"${CI-}\" ]; then\n  exit 0\nfi\n\nPATH=`git rev-parse --show-toplevel`\"/tools/bin:$PATH\"\n\n\nif ! which swiftformat > /dev/null; then\n  echo \"swiftformat not found\"\n  exit 0\nfi\n\nswiftformat \"${SRCROOT}/${PRODUCT_NAME}\"\n";
+		};
+		63DB8391342736573820937C /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n# vim:sw=2 et\n\nset -euo pipefail\n\nif [ -n \"${CI-}\" ]; then\n  exit 0\nfi\n\nPATH=`git rev-parse --show-toplevel`\"/tools/bin:$PATH\"\n\n\nif ! which swiftlint > /dev/null; then\n  echo \"swiftlint not found\"\n  exit 0\nfi\n\nif ! [ -f \"${SRCROOT}/${PRODUCT_NAME}/.swiftlint.yml\" ]; then\n  echo \".swiftlint.yml not found\"\n  exit 0\nfi\n\nswiftlint --config \"${SRCROOT}/${PRODUCT_NAME}/.swiftlint.yml\" --no-cache \"${SRCROOT}/${PRODUCT_NAME}\" | awk '!/ \\(missing_docs\\)$/ { sub(\": warning:\", \": error:\"); } { print }'\n";
+		};
+		70DECCA4EFBD7F5E1DC8228D /* swiftformat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftformat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n# vim:sw=2 et\n\nset -euo pipefail\n\nif [ -n \"${CI-}\" ]; then\n  exit 0\nfi\n\nPATH=`git rev-parse --show-toplevel`\"/tools/bin:$PATH\"\n\n\nif ! which swiftformat > /dev/null; then\n  echo \"swiftformat not found\"\n  exit 0\nfi\n\nswiftformat \"${SRCROOT}/${PRODUCT_NAME}\"\n";
+		};
+		8B7F35A2E451B78DD75E516E /* swiftformat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftformat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n# vim:sw=2 et\n\nset -euo pipefail\n\nif [ -n \"${CI-}\" ]; then\n  exit 0\nfi\n\nPATH=`git rev-parse --show-toplevel`\"/tools/bin:$PATH\"\n\n\nif ! which swiftformat > /dev/null; then\n  echo \"swiftformat not found\"\n  exit 0\nfi\n\nswiftformat \"${SRCROOT}/${PRODUCT_NAME}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		043389850DC6BC153EE4637A /* Sources */ = {

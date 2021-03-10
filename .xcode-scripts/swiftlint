@@ -1,0 +1,23 @@
+#!/bin/sh
+# vim:sw=2 et
+
+set -euo pipefail
+
+if [ -n "${CI-}" ]; then
+  exit 0
+fi
+
+PATH=`git rev-parse --show-toplevel`"/tools/bin:$PATH"
+
+
+if ! which swiftlint > /dev/null; then
+  echo "swiftlint not found"
+  exit 0
+fi
+
+if ! [ -f "${SRCROOT}/${PRODUCT_NAME}/.swiftlint.yml" ]; then
+  echo ".swiftlint.yml not found"
+  exit 0
+fi
+
+swiftlint --config "${SRCROOT}/${PRODUCT_NAME}/.swiftlint.yml" --no-cache "${SRCROOT}/${PRODUCT_NAME}" | awk '!/ \(missing_docs\)$/ { sub(": warning:", ": error:"); } { print }'

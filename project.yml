@@ -21,6 +21,12 @@ targets:
         CODE_SIGN_STYLE: Manual
     sources:
       - path: Quotes4U
+    preBuildScripts:
+      - path: .xcode-scripts/swiftformat
+        name: swiftformat
+      - path: .xcode-scripts/swiftlint
+        name: swiftlint
+
         
   Quotes4UTests:
     type: bundle.unit-test
@@ -32,6 +38,12 @@ targets:
         - $(inherited)
     sources:
       - path: Quotes4UTests
+    preBuildScripts:
+      - path: .xcode-scripts/swiftformat
+        name: swiftformat
+      - path: .xcode-scripts/swiftlint
+        name: swiftlint
+
 
     dependencies:
       - target: Quotes4U
@@ -44,6 +56,11 @@ targets:
       TEST_TARGET_NAME: Quotes4U
     sources:
       - path: Quotes4UUITests
+    preBuildScripts:
+      - path: .xcode-scripts/swiftformat
+        name: swiftformat
+      - path: .xcode-scripts/swiftlint
+        name: swiftlint
 
     dependencies:
       - target: Quotes4U

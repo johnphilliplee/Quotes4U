@@ -1,0 +1,8 @@
+--exclude .ci-artifacts,build,lib
+
+--ifdef noindent
+--indent 4
+--patternlet inline
+--ranges nospace
+--stripunusedargs closure-only
+--header strip

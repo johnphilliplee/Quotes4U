@@ -1,10 +1,3 @@
-//
-//  QuoteCardView.swift
-//  Quotes4U
-//
-//  Created by John Phillip Lee on 1/14/21.
-//
-
 import SwiftUI
 
 struct QuoteCardView: View {

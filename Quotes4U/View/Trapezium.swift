@@ -1,28 +1,21 @@
-//
-//  Trapezium.swift
-//  Quotes4U
-//
-//  Created by John Phillip Lee on 1/13/21.
-//
-
 import SwiftUI
 
 struct Trapezium: Shape {
     let offsetPercentage: CGFloat
-    
-    init (offsetPercentage: CGFloat = 0.6) {
+
+    init(offsetPercentage: CGFloat = 0.6) {
         self.offsetPercentage = offsetPercentage
     }
-    
+
     func path(in rect: CGRect) -> Path {
         var path = Path()
-        
+
         path.move(to: .zero)
         path.addLine(to: CGPoint(x: rect.maxX, y: rect.minY))
         path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
         path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY * offsetPercentage))
         path.closeSubpath()
-        
+
         return path
     }
 }
