@@ -14,8 +14,6 @@ struct HudView: View {
             .clipShape(Circle())
             .aspectRatio(contentMode: .fit)
             .overlay(Circle().stroke(lineWidth: 3).foregroundColor(colorForType(imageType)))
-//            .foregroundColor(colorForType(imageType))
-//            .background(Color.clear)
     }
 
     private func colorForType(_ type: ImageType) -> Color {
@@ -31,10 +29,8 @@ struct HudView: View {
         switch type {
         case .down:
             return Image(uiImage: UIImage(named: "kanye-smile")!)
-//            return Image(systemName: "icloud.and.arrow.down")
         case .cross:
             return Image(uiImage: UIImage(named: "kanye-mad")!)
-//            return Image(systemName: "xmark.icloud")
         }
     }
 }
