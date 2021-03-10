@@ -60,7 +60,9 @@
 		4CD901CA02B0C22327647BE3 /* TestQuote.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestQuote.json; sourceTree = "<group>"; };
 		4E05C9BDFCAFEABCB8A31972 /* QuoteServiceDataPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteServiceDataPublisher.swift; sourceTree = "<group>"; };
 		510820062EAF3E805E25E41F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		59675CEA4D364A9B93984883 /* Quotes4U-Target-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Quotes4U-Target-Release.xcconfig"; sourceTree = "<group>"; };
 		59AE47791AB53AB613EEC943 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6AB038F4861CE820BEA2694E /* Quotes4U-Target-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Quotes4U-Target-Debug.xcconfig"; sourceTree = "<group>"; };
 		764E4AFA265CB213136BDF4D /* QuoteModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuoteModel.xcdatamodel; sourceTree = "<group>"; };
 		76567AF384E97E9C7AC77B84 /* Quotes4UUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotes4UUITests.swift; sourceTree = "<group>"; };
 		841C6BA2BA54744A2D08BD22 /* KanyeQuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KanyeQuoteService.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 		C1AE9DE1EA1AF90CF797CFA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C381C1A5ACB11306CE0A9513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D18E77E126F7963B5841C9CC /* SavedQuotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedQuotesView.swift; sourceTree = "<group>"; };
+		EE1B6DB16411EC99DEE7D1D1 /* Quotes4U-Super.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Quotes4U-Super.xcconfig"; sourceTree = "<group>"; };
 		EEF55952001FF0E45260B0E7 /* Quotes4UUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = Quotes4UUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABCC7A95CDC0B9BBC4411A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFC6DAEB7326B57C0E3FBD7D /* QuoteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCardView.swift; sourceTree = "<group>"; };
@@ -101,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				9465958D401CA9A17874ECE3 /* project.yml */,
+				D08D2674690130F520AC28BC /* Configuration */,
 				77177CD748733426E45E4B1F /* Quotes4U */,
 				EFB447A302A2584AB04D10C3 /* Quotes4UTests */,
 				3A12FF4EC3ECF91AD6218F04 /* Quotes4UUITests */,
@@ -193,6 +197,16 @@
 				14703D6B170571964D4B260D /* MockQuoteService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		D08D2674690130F520AC28BC /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				EE1B6DB16411EC99DEE7D1D1 /* Quotes4U-Super.xcconfig */,
+				6AB038F4861CE820BEA2694E /* Quotes4U-Target-Debug.xcconfig */,
+				59675CEA4D364A9B93984883 /* Quotes4U-Target-Release.xcconfig */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		EFB447A302A2584AB04D10C3 /* Quotes4UTests */ = {
@@ -491,6 +505,7 @@
 /* Begin XCBuildConfiguration section */
 		04DE25DA7BBA4E873326247B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AB038F4861CE820BEA2694E /* Quotes4U-Target-Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -501,7 +516,6 @@
 					"@executable_path/Frameworks",
 				);
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -524,6 +538,7 @@
 		};
 		404B9A353BFA4C34952D1572 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59675CEA4D364A9B93984883 /* Quotes4U-Target-Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -534,7 +549,6 @@
 					"@executable_path/Frameworks",
 				);
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

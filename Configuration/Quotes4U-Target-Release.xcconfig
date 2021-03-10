@@ -1,0 +1,4 @@
+#include "../Quotes4U-Target.xcconfig"
+#include "./Quotes4U-Super.xcconfig"
+
+DEBUG_INFORMATION_FORMAT = dwarf-with-dsym

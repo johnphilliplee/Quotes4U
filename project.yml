@@ -16,10 +16,15 @@ targets:
   Quotes4U:
     type: application
     platform: iOS
+    configFiles:
+      Debug: Configuration/Quotes4U-Target-Debug.xcconfig
+      Release: Configuration/Quotes4U-Target-Release.xcconfig
     settings:
       base:
         CODE_SIGN_STYLE: Manual
     sources:
+      - path: Configuration
+        buildPhase: none
       - path: Quotes4U
     preBuildScripts:
       - path: .xcode-scripts/swiftformat
@@ -27,7 +32,6 @@ targets:
       - path: .xcode-scripts/swiftlint
         name: swiftlint
 
-        
   Quotes4UTests:
     type: bundle.unit-test
     platform: iOS
@@ -43,8 +47,6 @@ targets:
         name: swiftformat
       - path: .xcode-scripts/swiftlint
         name: swiftlint
-
-
     dependencies:
       - target: Quotes4U
 
@@ -61,7 +63,6 @@ targets:
         name: swiftformat
       - path: .xcode-scripts/swiftlint
         name: swiftlint
-
     dependencies:
       - target: Quotes4U
 
