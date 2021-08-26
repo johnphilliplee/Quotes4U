@@ -1,0 +1,23 @@
+# 1
+name: Run tests
+
+# 2
+on:
+  push
+
+# 3
+jobs:
+  build:
+    runs-on: macos-latest
+    # 4
+    steps:
+    # 5
+    - uses: actions/checkout@v2
+    # 6
+    - name: Install fastlane
+      run: |
+        bundle install
+    # 7
+    - name: Execute fastlane
+      run: |
+        bundle exec fastlane test
